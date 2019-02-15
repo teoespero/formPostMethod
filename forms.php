@@ -48,10 +48,12 @@
 							echo "Password minimum of 8 characters";
 						}
 
-						// show the password
+						// check if the password is for the user
 						else{
 							if($password == $validPW[$pwIndex]){
-								echo "Password ", $password;
+
+								// welcome the user
+								echo "Welcome ", $username,"<br>";
 							}
 							else{
 								echo "Password ", $password, " is invalid.";	
