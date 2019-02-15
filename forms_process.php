@@ -4,12 +4,6 @@
 	Western Governors University 
 -->
 
-<!-- 
-	Teodulfo Espero
-	BS Cloud and Systems Administration
-	Western Governors University 
--->
-
 
 <!-- This our php code that handles the validation -->
 <?php
