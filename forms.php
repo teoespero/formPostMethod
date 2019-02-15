@@ -11,6 +11,7 @@
 
 	// define our valid users
 	$validusers = array("edwin", "teoespero");
+	$validPW = array("12345678", "123456789");
 
 	// validation
 
@@ -36,8 +37,7 @@
 
 				if (in_array($username, $validusers)) {
 
-					// welcome the user
-					echo "Welcome ", $username,"<br>";	
+					$pwIndex = array_search($username, $validusers);
 
 					// check if a password is supplied
 					if(isset($_POST['key'])){
@@ -50,7 +50,12 @@
 
 						// show the password
 						else{
-							echo "Password ", $password;
+							if($password == $validPW[$pwIndex]){
+								echo "Password ", $password;
+							}
+							else{
+								echo "Password ", $password, " is invalid.";	
+							}
 						}
 					}
 					else
